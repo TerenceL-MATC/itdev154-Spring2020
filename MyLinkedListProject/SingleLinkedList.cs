@@ -175,7 +175,7 @@ namespace MyLinkedListProject
 
             Node p;
 
-            for (p = start.link; p.link.link != null; p = p.link) { }
+            for (p = start; p.link.link != null; p = p.link) { }
 
             int valueOfDeletedNode = p.link.data;
             p.link = null;
