@@ -25,25 +25,23 @@ namespace MyBinarySearchTreeProject
 
         private bool Insert(ref Node rootNode, int key)
         {
-            if(rootNode is null) //We have found the location to insert the new key in the search tree
+            if (rootNode is null) //We have found the location to insert the new key in the search tree
             {
                 rootNode = new Node(key);
                 return true;
             }
-            
-            if(key < rootNode.data)
+
+            if (key < rootNode.data)
             {
                 return Insert(ref rootNode.leftChild, key);
             }
-            else if(key > rootNode.data)
+
+            if (key > rootNode.data)
             {
                 return Insert(ref rootNode.rightChild, key);
             }
-            else //key is already in the search tree
-            {
-                return false;
-            }
-            
+
+            return false; //key is already in the search tree
         }
 
         public void Delete(int key)
@@ -71,60 +69,61 @@ namespace MyBinarySearchTreeProject
             {
                 return Delete(ref pNode, ref pNode.leftChild, key);
             }
-            else if(key > pNode.data) //key is greater than the key of pNode
+
+            if(key > pNode.data) //key is greater than the key of pNode
             {
                 return Delete(ref pNode, ref pNode.rightChild, key);
             }
-            else //key == pNode.data
+
+            //key == pNode.data
+            if (pNode.leftChild != null && pNode.rightChild != null) //Node to be deleted has two child nodes
             {
-                if(pNode.leftChild != null && pNode.rightChild != null) //Node to be deleted has two child nodes
+                Node successor = pNode.rightChild, 
+                        parentOfSuccessor = pNode;
+
+                //Searching for the inorder successor
+                while (successor.leftChild != null)
                 {
-                    Node successor = pNode.rightChild, 
-                         parentOfSuccessor = pNode;
+                    parentOfSuccessor = successor;
+                    successor = successor.leftChild;
+                }
 
-                    //Searching for the inorder successor
-                    while (successor.leftChild != null)
-                    {
-                        parentOfSuccessor = successor;
-                        successor = successor.leftChild;
-                    }
-
-                    pNode.data = successor.data;
+                pNode.data = successor.data;
                     
-                    //Deletes the successor node from the search tree.
-                    if(parentOfSuccessor == pNode)
-                    {
-                        parentOfSuccessor.rightChild = successor.rightChild;
-                    }
-                    else
-                    {
-                        parentOfSuccessor.leftChild = successor.rightChild;
-                    }
-                }
-                else //Node to be deleted has one child node or less
+                //Deletes the successor node from the search tree.
+                if(parentOfSuccessor == pNode)
                 {
-                    //Finds the child of the node to be deleted even if it's an external node
-                    Node orphanChild = pNode.leftChild ?? pNode.rightChild;
+                    parentOfSuccessor.rightChild = successor.rightChild;
+                }
+                else
+                {
+                    parentOfSuccessor.leftChild = successor.rightChild;
+                }
+            }
+            else //Node to be deleted has one child node or less
+            {
+                //Finds the child of the node to be deleted even if it's an external node
+                Node orphanChild = pNode.leftChild ?? pNode.rightChild;
 
-                    if (parentNode != null) //Node to be deleted isn't the root node
+                if (parentNode != null) //Node to be deleted isn't the root node
+                {
+                    if (pNode == parentNode.leftChild) //Node to be deleted is a left child
                     {
-                        if (pNode == parentNode.leftChild) //Node to be deleted is a left child
-                        {
-                            parentNode.leftChild = orphanChild;
-                        }
-                        else //Node to be deleted is a right child
-                        {
-                            parentNode.rightChild = orphanChild;
-                        }
+                        parentNode.leftChild = orphanChild;
                     }
-                    else //Deleting the root node of the tree
+                    else //Node to be deleted is a right child
                     {
-                        pNode = orphanChild;
+                        parentNode.rightChild = orphanChild;
                     }
                 }
-
-                return true;
+                else //Deleting the root node of the tree
+                {
+                    pNode = orphanChild;
+                }
             }
+
+            return true;
+            
         }
 
         public void Display()
