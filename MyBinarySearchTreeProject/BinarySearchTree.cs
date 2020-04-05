@@ -31,12 +31,12 @@ namespace MyBinarySearchTreeProject
                 return true;
             }
 
-            if (key < rootNode.data)
+            if (key < rootNode.data) // key is less than the key of pNode
             {
                 return Insert(ref rootNode.leftChild, key);
             }
 
-            if (key > rootNode.data)
+            if (key > rootNode.data) // key is greater than the key of pNode
             {
                 return Insert(ref rootNode.rightChild, key);
             }
@@ -79,7 +79,7 @@ namespace MyBinarySearchTreeProject
             if (pNode.leftChild != null && pNode.rightChild != null) //Node to be deleted has two child nodes
             {
                 Node successor = pNode.rightChild, 
-                        parentOfSuccessor = pNode;
+                     parentOfSuccessor = pNode;
 
                 //Searching for the inorder successor
                 while (successor.leftChild != null)
