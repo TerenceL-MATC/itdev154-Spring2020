@@ -31,12 +31,12 @@ namespace MyBinarySearchTreeProject
                 return true;
             }
 
-            if (key < rootNode.data) // key is less than the key of pNode
+            if (key < rootNode.data) // key is less than the key of rootNode
             {
                 return Insert(ref rootNode.leftChild, key);
             }
 
-            if (key > rootNode.data) // key is greater than the key of pNode
+            if (key > rootNode.data) // key is greater than the key of rootNode
             {
                 return Insert(ref rootNode.rightChild, key);
             }
