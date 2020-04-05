@@ -17,7 +17,7 @@ namespace MyBinarySearchTreeProject
             {
                 WriteLine($"{key} was successfully inserted in the search tree.");
             }
-            else //Key is already in the seearch tree.
+            else //Key is already in the search tree.
             {
                 WriteLine($"{key} is already in the search tree.");
             }
