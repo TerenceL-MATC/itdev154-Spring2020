@@ -15,9 +15,8 @@ namespace MyBubbleAndQuickSortProject
                 return;
             }
 
-            int swapsMade,    //How many position swaps occured during current pass
-                firstNumber,
-                secondNumber,
+            int swapsMade,                  //How many position swaps occured during current pass
+                firstNumber, secondNumber,  //References to the index number of elements to be compared
                 temp;
             
             //Increments the number of passes made through the list
@@ -79,6 +78,8 @@ namespace MyBubbleAndQuickSortProject
             //Shift elements to their proper side and finds where pivot should be placed.
             while(high >= low)
             {
+                /* Since it's possible that we may need to swap numbers more than once,
+                 * this makes sure we aren't comparing the same two elements twice in a row.*/
                 low++;
                 high--;
 
