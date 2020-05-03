@@ -112,7 +112,7 @@ namespace MyBubbleAndQuickSortProject
                     userList.PrintList();
                     break;
                 default:
-                    WriteLine(@"You somehow picked an option that doesn't exist.  There isn't any to do here.");
+                    WriteLine(@"You somehow picked an option that doesn't exist.  There isn't anything to do here.");
                     break;
             }
 
