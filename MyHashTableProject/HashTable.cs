@@ -15,7 +15,7 @@ namespace MyHashTableProject
         {
             if(wantedSize < 1)
             {
-                throw new InvalidOperationException(@"Hashtable must at leat have a size of one.");
+                throw new InvalidOperationException(@"Hashtable must at least have a size of one.");
             }
 
             addresses = new Node[wantedSize];
