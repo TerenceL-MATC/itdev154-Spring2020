@@ -70,7 +70,6 @@ namespace MyHashTableProject
         static void AppOperations(HashTable table, int choice)
         {
             int enteredKey;
-            string enteredName;
 
             WriteLine();
             switch (choice)
