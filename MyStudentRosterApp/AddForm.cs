@@ -35,10 +35,17 @@ namespace MyStudentRosterApp
                     GPA = txtBxGPA.Text.Trim()
                 };
 
-                currentRoster.Add(newStudent);
-
-                MessageBox.Show($"{newStudent.FirstName} {newStudent.LastName} has been added to the roster",
+                if(currentRoster.Add(newStudent))
+                {
+                    MessageBox.Show($"{newStudent.FirstName} {newStudent.LastName} has been added to the roster",
                                  "Student Added", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show($@"{newStudent.FirstName} {newStudent.LastName} can't be added to the roster, because it's full.",
+                                 "Roster is Full", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                
 
                 //Clears the form for another entry
                 txtBxID.Clear();
