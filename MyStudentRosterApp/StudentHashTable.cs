@@ -57,7 +57,7 @@ namespace MyStudentRosterApp
                  secondHash = SecondaryHash(keyValue),
                  nextHash;
 
-            for(uint i = 0; ; i++)
+            for(uint i = 0; i < theTable.Length; i++)
             {
                 nextHash = (firstHash + i * secondHash) % (uint)theTable.Length;
 
@@ -69,6 +69,8 @@ namespace MyStudentRosterApp
                     return true;
                 }
             }
+
+            return false;
         }
 
         public bool Remove(uint key)
