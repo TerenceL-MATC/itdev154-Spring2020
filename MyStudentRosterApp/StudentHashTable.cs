@@ -47,6 +47,11 @@ namespace MyStudentRosterApp
 
         public bool Add(Student newStudent)
         {
+            if(count is 4000000000)
+            {
+                return false;
+            }
+
             if((uint)theTable.Length < 4000000000 && (double)(count+1)/theTable.Length >= 0.75)
             {
                 Expand();
@@ -75,6 +80,11 @@ namespace MyStudentRosterApp
 
         public bool Remove(uint key)
         {
+            if(count is 0)
+            {
+                return false;
+            }
+
             uint? addressOfStudentToRemove = Search(key);
 
             if(addressOfStudentToRemove is null)
