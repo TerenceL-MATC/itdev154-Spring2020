@@ -58,7 +58,7 @@
             this.lblTitle.Location = new System.Drawing.Point(431, 36);
             this.lblTitle.Margin = new System.Windows.Forms.Padding(12, 0, 12, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(376, 36);
+            this.lblTitle.Size = new System.Drawing.Size(476, 46);
             this.lblTitle.TabIndex = 4;
             this.lblTitle.Text = "View Student Roster";
             // 
@@ -70,7 +70,7 @@
             this.label1.Location = new System.Drawing.Point(51, 112);
             this.label1.Margin = new System.Windows.Forms.Padding(12, 0, 12, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(252, 22);
+            this.label1.Size = new System.Drawing.Size(320, 27);
             this.label1.TabIndex = 5;
             this.label1.Text = "Show Students whose   ";
             // 
@@ -90,7 +90,7 @@
             this.cmbBxRecordFields.Location = new System.Drawing.Point(273, 112);
             this.cmbBxRecordFields.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.cmbBxRecordFields.Name = "cmbBxRecordFields";
-            this.cmbBxRecordFields.Size = new System.Drawing.Size(199, 26);
+            this.cmbBxRecordFields.Size = new System.Drawing.Size(199, 31);
             this.cmbBxRecordFields.TabIndex = 6;
             this.cmbBxRecordFields.SelectedIndexChanged += new System.EventHandler(this.cmbBxRecordFields_SelectedIndexChanged);
             // 
@@ -103,16 +103,10 @@
             this.cmbBxComparers.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbBxComparers.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbBxComparers.FormattingEnabled = true;
-            this.cmbBxComparers.Items.AddRange(new object[] {
-            "is before",
-            "isn\'t after",
-            "is",
-            "isn\'t before",
-            "is after"});
             this.cmbBxComparers.Location = new System.Drawing.Point(484, 112);
             this.cmbBxComparers.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.cmbBxComparers.Name = "cmbBxComparers";
-            this.cmbBxComparers.Size = new System.Drawing.Size(199, 26);
+            this.cmbBxComparers.Size = new System.Drawing.Size(199, 31);
             this.cmbBxComparers.TabIndex = 8;
             // 
             // cmbBxValues
@@ -122,7 +116,7 @@
             this.cmbBxValues.Location = new System.Drawing.Point(696, 113);
             this.cmbBxValues.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.cmbBxValues.Name = "cmbBxValues";
-            this.cmbBxValues.Size = new System.Drawing.Size(199, 26);
+            this.cmbBxValues.Size = new System.Drawing.Size(199, 31);
             this.cmbBxValues.TabIndex = 9;
             // 
             // label3
@@ -133,7 +127,7 @@
             this.label3.Location = new System.Drawing.Point(914, 118);
             this.label3.Margin = new System.Windows.Forms.Padding(12, 0, 12, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(274, 22);
+            this.label3.Size = new System.Drawing.Size(348, 27);
             this.label3.TabIndex = 10;
             this.label3.Text = "from the displayed table";
             // 
@@ -192,6 +186,7 @@
             this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
             this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
             this.iDDataGridViewTextBoxColumn.MaxInputLength = 9;
+            this.iDDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
             this.iDDataGridViewTextBoxColumn.ReadOnly = true;
             this.iDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -204,6 +199,7 @@
             this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
             this.firstNameDataGridViewTextBoxColumn.HeaderText = "First Name";
             this.firstNameDataGridViewTextBoxColumn.MaxInputLength = 20;
+            this.firstNameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
             this.firstNameDataGridViewTextBoxColumn.ReadOnly = true;
             this.firstNameDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -216,6 +212,7 @@
             this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
             this.lastNameDataGridViewTextBoxColumn.HeaderText = "Last Name";
             this.lastNameDataGridViewTextBoxColumn.MaxInputLength = 20;
+            this.lastNameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
             this.lastNameDataGridViewTextBoxColumn.ReadOnly = true;
             this.lastNameDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -228,6 +225,7 @@
             this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
             this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
             this.statusDataGridViewTextBoxColumn.MaxInputLength = 16;
+            this.statusDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
             this.statusDataGridViewTextBoxColumn.ReadOnly = true;
             this.statusDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -240,6 +238,7 @@
             this.majorDataGridViewTextBoxColumn.DataPropertyName = "Major";
             this.majorDataGridViewTextBoxColumn.HeaderText = "Major";
             this.majorDataGridViewTextBoxColumn.MaxInputLength = 40;
+            this.majorDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.majorDataGridViewTextBoxColumn.Name = "majorDataGridViewTextBoxColumn";
             this.majorDataGridViewTextBoxColumn.ReadOnly = true;
             this.majorDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -252,6 +251,7 @@
             this.gPADataGridViewTextBoxColumn.DataPropertyName = "GPA";
             this.gPADataGridViewTextBoxColumn.HeaderText = "GPA";
             this.gPADataGridViewTextBoxColumn.MaxInputLength = 5;
+            this.gPADataGridViewTextBoxColumn.MinimumWidth = 6;
             this.gPADataGridViewTextBoxColumn.Name = "gPADataGridViewTextBoxColumn";
             this.gPADataGridViewTextBoxColumn.ReadOnly = true;
             this.gPADataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -292,7 +292,7 @@
             // 
             // DisplayForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGreen;
             this.ClientSize = new System.Drawing.Size(1239, 712);

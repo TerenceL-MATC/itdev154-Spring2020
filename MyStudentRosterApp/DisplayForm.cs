@@ -134,19 +134,19 @@ namespace MyStudentRosterApp
                         switch (cmbBxComparers.SelectedItem)
                         {
                             case "is before":
-                                dataGridView1.DataSource = theCurrentTable.Where(pupil => string.CompareOrdinal(pupil.FirstName.ToLower(), filterKeyFName) > 0).ToArray();
+                                dataGridView1.DataSource = theCurrentTable.Where(pupil => string.CompareOrdinal(pupil.FirstName.ToLower(), filterKeyFName) < 0).ToArray();
                                 break;
                             case @"isn't after":
-                                dataGridView1.DataSource = theCurrentTable.Where(pupil => string.CompareOrdinal(pupil.FirstName.ToLower(), filterKeyFName) >= 0).ToArray();
+                                dataGridView1.DataSource = theCurrentTable.Where(pupil => string.CompareOrdinal(pupil.FirstName.ToLower(), filterKeyFName) <= 0).ToArray();
                                 break;
                             case "is":
                                 dataGridView1.DataSource = theCurrentTable.Where(pupil => string.CompareOrdinal(pupil.FirstName.ToLower(), filterKeyFName) is 0).ToArray();
                                 break;
                             case @"isn't before":
-                                dataGridView1.DataSource = theCurrentTable.Where(pupil => string.CompareOrdinal(pupil.FirstName.ToLower(), filterKeyFName) <= 0).ToArray();
+                                dataGridView1.DataSource = theCurrentTable.Where(pupil => string.CompareOrdinal(pupil.FirstName.ToLower(), filterKeyFName) >= 0).ToArray();
                                 break;
                             case "is after":
-                                dataGridView1.DataSource = theCurrentTable.Where(pupil => string.CompareOrdinal(pupil.FirstName.ToLower(), filterKeyFName) < 0).ToArray();
+                                dataGridView1.DataSource = theCurrentTable.Where(pupil => string.CompareOrdinal(pupil.FirstName.ToLower(), filterKeyFName) > 0).ToArray();
                                 break;
                         }
                     }
@@ -159,19 +159,19 @@ namespace MyStudentRosterApp
                         switch (cmbBxComparers.SelectedItem)
                         {
                             case "is before":
-                                dataGridView1.DataSource = theCurrentTable.Where(pupil => string.CompareOrdinal(pupil.LastName.ToLower(), filterKeyLName) > 0).ToArray();
+                                dataGridView1.DataSource = theCurrentTable.Where(pupil => string.CompareOrdinal(pupil.LastName.ToLower(), filterKeyLName) < 0).ToArray();
                                 break;
                             case @"isn't after":
-                                dataGridView1.DataSource = theCurrentTable.Where(pupil => string.CompareOrdinal(pupil.LastName.ToLower(), filterKeyLName) >= 0).ToArray();
+                                dataGridView1.DataSource = theCurrentTable.Where(pupil => string.CompareOrdinal(pupil.LastName.ToLower(), filterKeyLName) <= 0).ToArray();
                                 break;
                             case "is":
                                 dataGridView1.DataSource = theCurrentTable.Where(pupil => string.CompareOrdinal(pupil.LastName.ToLower(), filterKeyLName) is 0).ToArray();
                                 break;
                             case @"isn't before":
-                                dataGridView1.DataSource = theCurrentTable.Where(pupil => string.CompareOrdinal(pupil.LastName.ToLower(), filterKeyLName) <= 0).ToArray();
+                                dataGridView1.DataSource = theCurrentTable.Where(pupil => string.CompareOrdinal(pupil.LastName.ToLower(), filterKeyLName) >= 0).ToArray();
                                 break;
                             case "is after":
-                                dataGridView1.DataSource = theCurrentTable.Where(pupil => string.CompareOrdinal(pupil.LastName.ToLower(), filterKeyLName) < 0).ToArray();
+                                dataGridView1.DataSource = theCurrentTable.Where(pupil => string.CompareOrdinal(pupil.LastName.ToLower(), filterKeyLName) > 0).ToArray();
                                 break;
                         }
                     }
@@ -206,19 +206,19 @@ namespace MyStudentRosterApp
                         switch (cmbBxComparers.SelectedItem)
                         {
                             case "is before":
-                                dataGridView1.DataSource = theCurrentTable.Where(pupil => string.CompareOrdinal(pupil.LastName.ToLower(), filterKeyMajor) > 0).ToArray();
+                                dataGridView1.DataSource = theCurrentTable.Where(pupil => string.CompareOrdinal(pupil.LastName.ToLower(), filterKeyMajor) < 0).ToArray();
                                 break;
                             case @"isn't after":
-                                dataGridView1.DataSource = theCurrentTable.Where(pupil => string.CompareOrdinal(pupil.LastName.ToLower(), filterKeyMajor) >= 0).ToArray();
+                                dataGridView1.DataSource = theCurrentTable.Where(pupil => string.CompareOrdinal(pupil.LastName.ToLower(), filterKeyMajor) <= 0).ToArray();
                                 break;
                             case "is":
                                 dataGridView1.DataSource = theCurrentTable.Where(pupil => string.CompareOrdinal(pupil.LastName.ToLower(), filterKeyMajor) is 0).ToArray();
                                 break;
                             case @"isn't before":
-                                dataGridView1.DataSource = theCurrentTable.Where(pupil => string.CompareOrdinal(pupil.LastName.ToLower(), filterKeyMajor) <= 0).ToArray();
+                                dataGridView1.DataSource = theCurrentTable.Where(pupil => string.CompareOrdinal(pupil.LastName.ToLower(), filterKeyMajor) >= 0).ToArray();
                                 break;
                             case "is after":
-                                dataGridView1.DataSource = theCurrentTable.Where(pupil => string.CompareOrdinal(pupil.LastName.ToLower(), filterKeyMajor) < 0).ToArray();
+                                dataGridView1.DataSource = theCurrentTable.Where(pupil => string.CompareOrdinal(pupil.LastName.ToLower(), filterKeyMajor) > 0).ToArray();
                                 break;
                         }
                     }
@@ -231,10 +231,10 @@ namespace MyStudentRosterApp
                         switch (cmbBxComparers.SelectedItem)
                         {
                             case "is less than":
-                                dataGridView1.DataSource = theCurrentTable.Where(pupil => string.CompareOrdinal(pupil.GPA, filterKeyGPA) > 0).ToArray();
+                                dataGridView1.DataSource = theCurrentTable.Where(pupil => string.CompareOrdinal(pupil.GPA, filterKeyGPA) < 0).ToArray();
                                 break;
                             case @"isn't greater than":
-                                dataGridView1.DataSource = theCurrentTable.Where(pupil => string.CompareOrdinal(pupil.GPA, filterKeyGPA) >= 0).ToArray();
+                                dataGridView1.DataSource = theCurrentTable.Where(pupil => string.CompareOrdinal(pupil.GPA, filterKeyGPA) <= 0).ToArray();
                                 break;
                             case "is":
                                 dataGridView1.DataSource = theCurrentTable.Where(pupil => string.CompareOrdinal(pupil.GPA, filterKeyGPA) is 0).ToArray();
@@ -243,7 +243,7 @@ namespace MyStudentRosterApp
                                 dataGridView1.DataSource = theCurrentTable.Where(pupil => string.CompareOrdinal(pupil.GPA, filterKeyGPA) >= 0).ToArray();
                                 break;
                             case "is greater than":
-                                dataGridView1.DataSource = theCurrentTable.Where(pupil => string.CompareOrdinal(pupil.GPA, filterKeyGPA) >= 0).ToArray();
+                                dataGridView1.DataSource = theCurrentTable.Where(pupil => string.CompareOrdinal(pupil.GPA, filterKeyGPA) > 0).ToArray();
                                 break;
                         }
                     }
